@@ -303,7 +303,8 @@
             </div>
             <div class="text-center">
                 <p class="fs-4">Не знайшли тваринки яка відповідає вашим запитам?</p>
-                <button class="btn btn-success rounded-pill fs-5">Залишити заявку</button>
+                <button class="btn btn-success rounded-pill fs-5" data-bs-toggle="modal"
+                    data-bs-target="#spyModal">Залишити заявку</button>
             </div>
         </main>
     </div>
@@ -346,6 +347,22 @@
                 </ul>
             </div>
         </footer>
+    </div>
+    <div class="modal fade" id="spyModal" tabindex="-1" aria-labelledby="spyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="spyModalLabel">Успішно відслідковуємо</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Тепер відслідковуємо тварин, що відповідають вашим критеріям.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Добре!</button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="modal fade" id="sendPetModal" tabindex="-1" aria-labelledby="sendPetModalLabel" aria-hidden="true">
         <div class="modal-dialog">
