@@ -30,19 +30,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <form class="d-flex m-2" role="search">
-                            <div class="input-group">
-                                <span class="input-group-text rounded-start-pill"><i class="bi bi-search"></i></span>
-                                <input type="search" class="form-control rounded-end-pill"
-                                    placeholder="Пошук улюбленців..." aria-label="Search">
-                            </div>
-                        </form>
                     </ul>
-                    <a href="/favorites.html" class="btn btn-lg rounded-pill me-1"><i class="bi bi-heart"
-                            aria-label="Улюблене"></i></a>
-                    <a href="/messages.html" class="btn btn-lg rounded-pill me-1"><i class="bi bi-bell"
-                            aria-label="Повідомлення"></i></a>
-                    <a href="/login.html" class="btn btn-success rounded-pill">Увійти</a>
+                    <a href="/index.html" class="btn btn-success rounded-pill">Увійти</a>
                 </div>
             </div>
         </nav>
@@ -50,9 +39,9 @@
             <div class="border p-3 m-3 rounded mx-auto" style="max-width: 681px;">
                 <h1 class="text-center">Створіть акаунт</h1>
                 <div class="mb-3 text-center">
-                    <button class="btn btn-primary disabled-link" id="volunteerButton"
+                    <button class="btn btn-success rounded-pill disabled-link" id="volunteerButton"
                         aria-disabled="true">Волонтер</button>
-                    <button class="btn btn-secondary" id="shelterButton">Притулок</button>
+                    <button class="btn btn-secondary rounded-pill" id="shelterButton">Притулок</button>
                 </div>
                 <form id="registrationForm" action="#">
                     <div class="mb-3">
@@ -108,8 +97,15 @@
                         <label class="form-check-label" for="iAgreeCheck">Я погоджуюсь з умовами використання
                             сайту.</label>
                     </div>
-                    <button type="submit" id="registerButton" class="btn btn-primary w-100">Зареєструвати як
+                    <!-- Повноцінна відправка форми потребувала б бекенду. Тому, замість цього земулюймо цей функціонал. -->
+                    <button type="submit" id="registerButton"
+                        class="btn btn-success rounded-pill w-100 d-none">Зареєструвати як
                         волонтера</button>
+                    <a href="/volunteer/index.html" id="volunteerRegisterButton"
+                        class="btn btn-success rounded-pill w-100">Зареєструвати як
+                        волонтера</a>
+                    <a href="/shelter/index.html" id="shelterRegisterButton"
+                        class="btn btn-success rounded-pill w-100 d-none">Зареєструвати притулок</a>
                 </form>
             </div>
         </main>
@@ -121,10 +117,6 @@
                     <h5>Навігація</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Головна</a></li>
-                        <li class="nav-item mb-2"><a href="/pets.html"
-                                class="nav-link p-0 text-body-secondary">Тваринки</a></li>
-                        <li class="nav-item mb-2"><a href="/shelters.html"
-                                class="nav-link p-0 text-body-secondary">Притулки</a></li>
                     </ul>
                 </div>
 
@@ -169,9 +161,9 @@
                 shelterGroup.classList.add("d-none");
 
                 volunteerButton.classList.remove("btn-secondary");
-                volunteerButton.classList.add("btn-primary", "disabled-link");
+                volunteerButton.classList.add("btn-success", "disabled-link");
 
-                shelterButton.classList.remove("btn-primary", "disabled-link");
+                shelterButton.classList.remove("btn-success", "disabled-link");
                 shelterButton.classList.add("btn-secondary");
                 nameInput.required = true;
                 surnameInput.required = true;
@@ -182,11 +174,11 @@
                 volunteerGroup.classList.add("d-none");
                 shelterGroup.classList.remove("d-none");
 
-                volunteerButton.classList.remove("btn-primary", "disabled-link");
+                volunteerButton.classList.remove("btn-success", "disabled-link");
                 volunteerButton.classList.add("btn-secondary");
 
                 shelterButton.classList.remove("btn-secondary");
-                shelterButton.classList.add("btn-primary", "disabled-link");
+                shelterButton.classList.add("btn-success", "disabled-link");
                 nameInput.required = false;
                 surnameInput.required = false;
                 shelterNameInput.required = true;
