@@ -1,0 +1,46 @@
+.header-image {
+    height: 20em;
+    width: 100%;
+    background-image: url("/assets/main-background.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-bottom: 10em;
+    /* object-fit: cover; */
+}
+
+.cards-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+.about-block {
+    box-shadow: 0px 4px 4px 0px #00000040;
+    background-color: #F5F9EF;
+}
+
+.donate-box {
+    max-width: 616px;
+    background-color: #CFEDA2;
+}
+
+.last-adverts {
+    background-color: #F4F4E9;
+}
+
+.more-card {
+    background-color: #C6EEA9;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.upper {
+    flex-grow: 1;
+}
