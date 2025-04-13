@@ -44,3 +44,18 @@ body {
 .upper {
     flex-grow: 1;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.upper {
+    flex-grow: 1;
+}
+
+.disabled-link {
+    pointer-events: none;
+    cursor: default;
+}

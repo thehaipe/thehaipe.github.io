@@ -12,7 +12,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
         integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/login.css" />
+    <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
@@ -28,40 +28,97 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Собаки та цуценята</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Коти та кошенята</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Інші тваринки</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Новини та блог</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Про нас</a>
-                        </li>
+                        <form class="d-flex m-2" role="search">
+                            <div class="input-group">
+                                <span class="input-group-text rounded-start-pill"><i class="bi bi-search"></i></span>
+                                <input type="search" class="form-control rounded-end-pill"
+                                    placeholder="Пошук улюбленців..." aria-label="Search">
+                            </div>
+                        </form>
                     </ul>
-                    <form class="d-flex m-2" role="search">
-                        <div class="input-group">
-                            <span class="input-group-text rounded-start-pill"><i class="bi bi-search"></i></span>
-                            <input type="search" class="form-control rounded-end-pill" placeholder="Пошук улюбленців..."
-                                aria-label="Search">
-                        </div>
-                    </form>
-                    <a href="/login.html" class="btn btn-primary rounded-pill">Увійти</a>
+                    <a href="/login.html" class="btn btn-success rounded-pill">Увійти</a>
                 </div>
             </div>
         </nav>
-        <main class="container">
-            <h1>Знайдіть свого улюбленця</h1>
-            <div class="d-flex">
-                <div class="">
-
+        <main>
+            <h1 class="text-center">Знайдіть свого улюбленця</h1>
+            <div class="d-flex align-items-start">
+                <div class="border rounded-end-5 p-3" style="background-color: #E6F2E5;">
+                    <h2 class="text-center">Фільтр</h2>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="kindInput" placeholder="Коргі">
+                        <label for="kindInput">Порода</label>
+                    </div>
+                    <h3>Тваринка</h3>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="dogCheck">
+                        <label class="form-check-label" for="dogCheck">Собака</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="catCheck">
+                        <label class="form-check-label" for="catCheck">Кіт</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="rabbitCheck">
+                        <label class="form-check-label" for="rabbitCheck">Кролик</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="otherCheck">
+                        <label class="form-check-label" for="otherCheck">Інші</label>
+                    </div>
+                    <h3>Стать</h3>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="maleCheck">
+                        <label class="form-check-label" for="maleCheck">Чоловіча</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="femaleCheck">
+                        <label class="form-check-label" for="femaleCheck">Жіноча</label>
+                    </div>
+                    <h3>Вік</h3>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="ageCheck1">
+                        <label class="form-check-label" for="ageCheck1">1 - 6 міс.</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="ageCheck2">
+                        <label class="form-check-label" for="ageCheck2">6 міс. - 1 рік</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="ageCheck3">
+                        <label class="form-check-label" for="ageCheck3">1 рік - 2 роки</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="ageCheck4">
+                        <label class="form-check-label" for="ageCheck4">2 роки - 4 роки</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="ageCheck5">
+                        <label class="form-check-label" for="ageCheck5">4 роки - 6 років</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="ageCheck6">
+                        <label class="form-check-label" for="ageCheck6">6 років і старше</label>
+                    </div>
+                    <h3>Стан здоров'я</h3>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="healthCheck1">
+                        <label class="form-check-label" for="healthCheck1">Здоровий</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="healthCheck2">
+                        <label class="form-check-label" for="healthCheck2">Задовільний</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="healthCheck3">
+                        <label class="form-check-label" for="healthCheck3">Потрібна мед. допомога</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="cityInput" placeholder="Львів">
+                        <label for="cityInput">Місто</label>
+                    </div>
                 </div>
-                <div>
+                <div class="container row row-cols-1 row-cols-md-2 row-cols-lg-3">
                     <div class="col">
                         <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
                             <div class="col-md-6">
@@ -70,13 +127,165 @@
                             </div>
                             <div class="col-md-6 p-4 d-flex flex-column">
                                 <div class="flex-grow-1">
-                                    <h5 class="mt-0">4 лапи</h5>
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
                                     <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
-                                    <p><i class="bi bi-telephone"></i> 012 345 6789</p>
                                 </div>
-                                <a href="/shelter.html"
-                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Подивитись
-                                    детальніше</a>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
+                            <div class="col-md-6">
+                                <img src="/assets/dogs/dog1.png" class="w-100 h-100 object-fit-cover rounded-5"
+                                    alt="Фотографія тваринки">
+                            </div>
+                            <div class="col-md-6 p-4 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
+                                    <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
+                                </div>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
+                            <div class="col-md-6">
+                                <img src="/assets/dogs/dog1.png" class="w-100 h-100 object-fit-cover rounded-5"
+                                    alt="Фотографія тваринки">
+                            </div>
+                            <div class="col-md-6 p-4 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
+                                    <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
+                                </div>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
+                            <div class="col-md-6">
+                                <img src="/assets/dogs/dog1.png" class="w-100 h-100 object-fit-cover rounded-5"
+                                    alt="Фотографія тваринки">
+                            </div>
+                            <div class="col-md-6 p-4 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
+                                    <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
+                                </div>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
+                            <div class="col-md-6">
+                                <img src="/assets/dogs/dog1.png" class="w-100 h-100 object-fit-cover rounded-5"
+                                    alt="Фотографія тваринки">
+                            </div>
+                            <div class="col-md-6 p-4 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
+                                    <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
+                                </div>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
+                            <div class="col-md-6">
+                                <img src="/assets/dogs/dog1.png" class="w-100 h-100 object-fit-cover rounded-5"
+                                    alt="Фотографія тваринки">
+                            </div>
+                            <div class="col-md-6 p-4 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
+                                    <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
+                                </div>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
+                            <div class="col-md-6">
+                                <img src="/assets/dogs/dog1.png" class="w-100 h-100 object-fit-cover rounded-5"
+                                    alt="Фотографія тваринки">
+                            </div>
+                            <div class="col-md-6 p-4 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
+                                    <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
+                                </div>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
+                            <div class="col-md-6">
+                                <img src="/assets/dogs/dog1.png" class="w-100 h-100 object-fit-cover rounded-5"
+                                    alt="Фотографія тваринки">
+                            </div>
+                            <div class="col-md-6 p-4 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
+                                    <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
+                                </div>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
+                            <div class="col-md-6">
+                                <img src="/assets/dogs/dog1.png" class="w-100 h-100 object-fit-cover rounded-5"
+                                    alt="Фотографія тваринки">
+                            </div>
+                            <div class="col-md-6 p-4 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
+                                    <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
+                                </div>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="row g-0 position-relative rounded-5 m-2" style="background-color: #F2F2F2;">
+                            <div class="col-md-6">
+                                <img src="/assets/dogs/dog1.png" class="w-100 h-100 object-fit-cover rounded-5"
+                                    alt="Фотографія тваринки">
+                            </div>
+                            <div class="col-md-6 p-4 d-flex flex-column">
+                                <div class="flex-grow-1">
+                                    <h5 class="mt-0">Дональд</h5>
+                                    <p><i class="bi bi-house-heart"></i> 4 лапи</p>
+                                    <p><i class="bi bi-map"></i> вул. Остроградська 4, Львів, Львівська область</p>
+                                </div>
+                                <a href="/pet_page.html"
+                                    class="stretched-link btn btn-outline-primary d-block w-100 rounded-pill">Детальніше</a>
                             </div>
                         </div>
                     </div>
@@ -91,15 +300,10 @@
                     <h5>Навігація</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Головна</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Собаки та
-                                цуценята</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Коти та
-                                кошенята</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Інші тваринки</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Новини та
-                                блог</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Про нас</a></li>
+                        <li class="nav-item mb-2"><a href="/pets.html"
+                                class="nav-link p-0 text-body-secondary">Тваринки</a></li>
+                        <li class="nav-item mb-2"><a href="/shelters.html"
+                                class="nav-link p-0 text-body-secondary">Притулки</a></li>
                     </ul>
                 </div>
 
@@ -111,7 +315,7 @@
                             <label for="newsletter1" class="visually-hidden">Поштова скринька</label>
                             <input id="newsletter1" type="email" class="form-control"
                                 placeholder="користувач@пошта.укр">
-                            <button class="btn btn-primary" type="button">Підписатись</button>
+                            <button class="btn btn-success rounded-pill" type="button">Підписатись</button>
                         </div>
                     </form>
                 </div>

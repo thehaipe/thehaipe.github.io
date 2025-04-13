@@ -12,7 +12,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
         integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/login.css" />
+    <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
@@ -28,30 +28,15 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Собаки та цуценята</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Коти та кошенята</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Інші тваринки</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Новини та блог</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Про нас</a>
-                        </li>
+                        <form class="d-flex m-2" role="search">
+                            <div class="input-group">
+                                <span class="input-group-text rounded-start-pill"><i class="bi bi-search"></i></span>
+                                <input type="search" class="form-control rounded-end-pill"
+                                    placeholder="Пошук улюбленців..." aria-label="Search">
+                            </div>
+                        </form>
                     </ul>
-                    <form class="d-flex m-2" role="search">
-                        <div class="input-group">
-                            <span class="input-group-text rounded-start-pill"><i class="bi bi-search"></i></span>
-                            <input type="search" class="form-control rounded-end-pill" placeholder="Пошук улюбленців..."
-                                aria-label="Search">
-                        </div>
-                    </form>
-                    <a href="/login.html" class="btn btn-primary rounded-pill">Увійти</a>
+                    <a href="/login.html" class="btn btn-success rounded-pill">Увійти</a>
                 </div>
             </div>
         </nav>
@@ -61,14 +46,14 @@
                 <p class="fs-5">Шукайте притулки для тварин</p>
                 <form class="d-flex flex-wrap flex-lg-nowrap align-items-center">
                     <div class="form-floating flex-grow-1">
-                        <input type="text" class="form-control" id="floatingInput"
-                            placeholder="Житомирська область, Житомир...">
-                        <label for="floatingInput">Місцезнаходження</label>
+                        <input type="text" class="form-control" id="placeInput"
+                            placeholder="Львівська область, Львів...">
+                        <label for="placeInput">Місцезнаходження</label>
                     </div>
                     <p class="mx-3 my-0">або</p>
                     <div class="form-floating flex-grow-1">
-                        <input type="text" class="form-control" id="floatingInput" placeholder="4 лапи">
-                        <label for="floatingInput">Введіть назву притулку</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="4 лапи">
+                        <label for="nameInput">Введіть назву притулку</label>
                     </div>
                     <button class="btn btn-primary d-block m-1"><i class="bi bi-search"></i> Пошук</button>
                 </form>
@@ -230,15 +215,10 @@
                     <h5>Навігація</h5>
                     <ul class="nav flex-column">
                         <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-body-secondary">Головна</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Собаки та
-                                цуценята</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Коти та
-                                кошенята</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Інші тваринки</a>
-                        </li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Новини та
-                                блог</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Про нас</a></li>
+                        <li class="nav-item mb-2"><a href="/pets.html"
+                                class="nav-link p-0 text-body-secondary">Тваринки</a></li>
+                        <li class="nav-item mb-2"><a href="/shelters.html"
+                                class="nav-link p-0 text-body-secondary">Притулки</a></li>
                     </ul>
                 </div>
 
@@ -250,7 +230,7 @@
                             <label for="newsletter1" class="visually-hidden">Поштова скринька</label>
                             <input id="newsletter1" type="email" class="form-control"
                                 placeholder="користувач@пошта.укр">
-                            <button class="btn btn-primary" type="button">Підписатись</button>
+                            <button class="btn btn-success rounded-pill" type="button">Підписатись</button>
                         </div>
                     </form>
                 </div>
