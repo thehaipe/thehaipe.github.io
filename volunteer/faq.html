@@ -43,6 +43,8 @@
                             aria-label="Улюблене"></i></a>
                     <a href="/volunteer/messages.html" class="btn btn-lg rounded-pill me-1"><i class="bi bi-bell"
                             aria-label="Повідомлення"></i></a>
+                    <button class="btn btn-outline-secondary rounded-pill me-1" data-bs-toggle="modal"
+                        data-bs-target="#sendPetModal">Створити <i class="bi bi-plus-circle"></i></button>
                     <a href="/volunteer/settings.html" class="btn btn-success rounded-pill"><i
                             class="bi bi-person-circle"></i> Профіль</a>
                 </div>
@@ -140,6 +142,87 @@
                 </ul>
             </div>
         </footer>
+    </div>
+    <div class="modal fade" id="sendPetModal" tabindex="-1" aria-labelledby="sendPetModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="sendPetModalLabel">Заповніть форму на передачу тваринки притулку
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex flex-wrap-reverse justify-content-between">
+                        <div>
+                            <div class="mb-3">
+                                <label for="kindInput" class="form-label">Вид</label>
+                                <input type="text" class="form-control" id="kindInput" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="nameInput" class="form-label">Ім'я</label>
+                                <input type="text" class="form-control" id="nameInput" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="genderInput" class="form-label">Стать</label>
+                                <select class="form-select" id="genderInput">
+                                    <option selected>Оберіть стать</option>
+                                    <option value="1">Чоловіча</option>
+                                    <option value="2">Жіноча</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="border rounded-5 mx-auto mb-3"
+                                style="width: 125px; height: 175px; background-color: #D9D9D9;">
+                            </div>
+                            <button class="btn btn-success d-block mx-auto rounded-pill"><i
+                                    class="bi bi-file-earmark-image"></i> Додати
+                                фото</button>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="kind2Input" class="form-label">Порода</label>
+                        <input type="text" class="form-control" id="kind2Input" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ageInput" class="form-label">Вік</label>
+                        <select class="form-select" id="ageInput">
+                            <option selected>Оберіть вік</option>
+                            <option value="1">1 - 6 міс.</option>
+                            <option value="2">6 міс. - 1 рік</option>
+                            <option value="3">1 рік - 2 роки</option>
+                            <option value="4">2 роки - 4 роки</option>
+                            <option value="5">4 роки - 6 років</option>
+                            <option value="6">6 років і старше</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ageInput" class="form-label">Стан здоров'я</label>
+                        <select class="form-select" id="ageInput">
+                            <option selected>Оберіть стан здоров'я</option>
+                            <option value="1">Здоровий</option>
+                            <option value="2">Задовільний</option>
+                            <option value="3">Потрібна мед. допомога</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="descriptionInput" class="form-label">Опис</label>
+                        <input type="text" class="form-control" id="descriptionInput" required>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="understandCheck" required>
+                        <label class="form-check-label" for="understandCheck">Я розумію, що дані які будуть вказані у
+                            формі, відправляться на обробку в AdoptMe, і AdoptMe не несе відповідальність за прийняття
+                            чи
+                            відхилення заявки притулком</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Скасувати</button>
+                    <button type="button" class="btn btn-primary">Надіслати</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
         integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
