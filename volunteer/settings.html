@@ -76,22 +76,29 @@
                 <div class="mb-3 col">
                     <label for="nameInput" class="form-label">Ім'я</label>
                     <input type="text" class="form-control" id="nameInput" placeholder="Володимир" required
-                        autocomplete="given-name" required>
+                        autocomplete="given-name" required value="Артюр">
                 </div>
                 <div class="mb-3 col">
                     <label for="surnameInput" class="form-label">Прізвище <span
                             class="text-secondary">(необов'язково)</span></label>
                     <input type="text" class="form-control" id="surnameInput" placeholder="Великий" required
-                        autocomplete="family-name">
+                        autocomplete="family-name" value="Рембо">
                 </div>
                 <div class="mb-3 col">
                     <label for="phoneInput" class="form-label">Номер телефону</label>
-                    <input type="tel" class="form-control" id="phoneInput" placeholder="012 345 6789" required>
+                    <input type="tel" class="form-control" id="phoneInput" placeholder="012 345 6789" required
+                        value="123 456 7890">
                 </div>
                 <div class="mb-3 col">
                     <label for="emailInput" class="form-label">Електронна скринька</label>
-                    <input type="email" class="form-control" id="emailInput" placeholder="користувач@пошта.укр"
-                        required>
+                    <input type="email" class="form-control" id="emailInput" placeholder="користувач@пошта.укр" required
+                        value="arturoRembo@gmail.com">
+                </div>
+                <div class="mb-3">
+                    <label for="postalCodeInput" class="form-label">Поштовий індекс <span
+                            class="text-secondary">(необов'язково)</span></label>
+                    <input type="text" autocomplete="postal-code" class="form-control" id="postalCodeInput"
+                        placeholder="00000" value="12345">
                 </div>
                 <div class="mb-3 col">
                     <label for="passwordInput" class="form-label">Пароль</label>
@@ -108,12 +115,6 @@
                     <label for="repeatPasswordInput" class="form-label">Повторіть пароль</label>
                     <input type="password" class="form-control" id="repeatPasswordInput" placeholder="Ваш пароль..."
                         autocomplete="new-password" required>
-                </div>
-                <div class="mb-3">
-                    <label for="postalCodeInput" class="form-label">Поштовий індекс <span
-                            class="text-secondary">(необов'язково)</span></label>
-                    <input type="text" autocomplete="postal-code" class="form-control" id="postalCodeInput"
-                        placeholder="00000">
                 </div>
                 <div class="mb-3 col col-lg-12 d-flex justify-content-between">
                     <button type="submit" class="btn btn-success rounded-pill">Зберегти</button>
