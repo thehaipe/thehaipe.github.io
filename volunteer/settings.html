@@ -49,7 +49,6 @@
             </div>
         </nav>
         <main class="container">
-            <h1>Хелоу, це місце ще в розробці! Постучіться хоча б.</h1>
             <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between rounded-5 border shadow p-5"
                 style="background-color: #F5F5F5;">
                 <div class="me-3">
@@ -73,39 +72,54 @@
             </div>
             <h2 class="mt-5">Редагувати профіль</h2>
             <hr>
-            <form>
-                <div class="mb-3">
+            <form class="row row-cols-1 row-cols-lg-2">
+                <div class="mb-3 col">
                     <label for="nameInput" class="form-label">Ім'я</label>
                     <input type="text" class="form-control" id="nameInput" placeholder="Володимир" required
                         autocomplete="given-name" required>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 col">
                     <label for="surnameInput" class="form-label">Прізвище <span
                             class="text-secondary">(необов'язково)</span></label>
                     <input type="text" class="form-control" id="surnameInput" placeholder="Великий" required
                         autocomplete="family-name">
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 col">
                     <label for="phoneInput" class="form-label">Номер телефону</label>
                     <input type="tel" class="form-control" id="phoneInput" placeholder="012 345 6789" required>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 col">
                     <label for="emailInput" class="form-label">Електронна скринька</label>
                     <input type="email" class="form-control" id="emailInput" placeholder="користувач@пошта.укр"
                         required>
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 col">
                     <label for="passwordInput" class="form-label">Пароль</label>
                     <input type="password" class="form-control" id="passwordInput" placeholder="Ваш пароль..."
-                        autocomplete="new-password" required aria-describedby="passwordHelp">
+                        autocomplete="current-password" required aria-describedby="passwordHelp">
+                </div>
+                <div class="mb-3 col">
+                    <label for="newPasswordInput" class="form-label">Новий пароль</label>
+                    <input type="password" class="form-control" id="newPasswordInput" placeholder="Ваш пароль..."
+                        autocomplete="new-password" required>
                     <div id="passwordHelp" class="form-text">Придумайте надійний пароль.</div>
                 </div>
-                <div class="mb-3">
-                    <label for="passwordInput" class="form-label">Повторіть пароль</label>
-                    <input type="password" class="form-control" id="passwordInput" placeholder="Ваш пароль..."
+                <div class="mb-3 col">
+                    <label for="repeatPasswordInput" class="form-label">Повторіть пароль</label>
+                    <input type="password" class="form-control" id="repeatPasswordInput" placeholder="Ваш пароль..."
                         autocomplete="new-password" required>
                 </div>
-                <button type="submit" class="btn btn-success">Зберегти</button>
+                <div class="mb-3">
+                    <label for="postalCodeInput" class="form-label">Поштовий індекс <span
+                            class="text-secondary">(необов'язково)</span></label>
+                    <input type="text" autocomplete="postal-code" class="form-control" id="postalCodeInput"
+                        placeholder="00000">
+                </div>
+                <div class="mb-3 col col-lg-12 d-flex justify-content-between">
+                    <button type="submit" class="btn btn-success rounded-pill">Зберегти</button>
+                    <button type="button" class="btn btn-danger rounded-pill" data-bs-toggle="modal"
+                        data-bs-target="#exitModal">Вийти</button>
+                </div>
             </form>
         </main>
     </div>
@@ -148,6 +162,24 @@
                 </ul>
             </div>
         </footer>
+    </div>
+    <div class="modal fade" id="exitModal" tabindex="-1" aria-labelledby="exitModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exitModalLabel">Упевнені, що бажаєте вийти?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Ми не зможемо відправляти вам оновлення щодо ваших запитів, якщо ви не зареєстровані в акаунт.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary rounded-pill"
+                        data-bs-dismiss="modal">Передумав</button>
+                    <a href="/index.html" type="button" class="btn btn-danger rounded-pill">Так, упевнений</a>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
         integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
