@@ -160,6 +160,8 @@
             if (isVolunteerEnabled) {
                 volunteerGroup.classList.remove("d-none");
                 shelterGroup.classList.add("d-none");
+                volunteerRegisterButton.classList.remove("d-none");
+                shelterRegisterButton.classList.add("d-none");
 
                 volunteerButton.classList.remove("btn-secondary");
                 volunteerButton.classList.add("btn-success", "disabled-link");
@@ -173,6 +175,8 @@
             } else {
                 volunteerGroup.classList.add("d-none");
                 shelterGroup.classList.remove("d-none");
+                volunteerRegisterButton.classList.add("d-none");
+                shelterRegisterButton.classList.remove("d-none");
 
                 volunteerButton.classList.remove("btn-success", "disabled-link");
                 volunteerButton.classList.add("btn-secondary");
