@@ -50,19 +50,20 @@
         </nav>
         <main class="container">
             <h1>Хелоу, це місце ще в розробці! Постучіться хоча б.</h1>
-            <div class="d-flex justify-content-between">
-                <div>
+            <div class="d-flex flex-wrap flex-lg-nowrap justify-content-between rounded-5 border shadow p-5"
+                style="background-color: #F5F5F5;">
+                <div class="me-3">
                     <img src="/assets/users/He.jpg" width="200" height="200" class="object-fit-cover rounded-5"
                         alt="Фотографія волонтера">
-                    <p><small>Змінити фото</small></p>
+                    <p class="text-center"><small>Змінити фото</small></p>
                 </div>
-                <div>
-                    <h1>Артюр Рембо</h1>
+                <div class="me-3">
+                    <h1 class="fs-4">Артюр Рембо</h1>
                     <hr>
                     <p><i class="bi bi-map"></i> вул. Листоградова, м. Мирожит, Мирожитська область</p>
                 </div>
                 <div class="text-center">
-                    <p class="fs-4"><a href="mailto:arturoRembo@gmail.com"
+                    <p class="fs-4"><a class="text-nowrap" href="mailto:arturoRembo@gmail.com"
                             style="color: black; text-decoration: none;"><i class="bi bi-envelope"></i>
                             arturoRembo@gmail.com</a></p>
                     <hr>
@@ -70,6 +71,42 @@
                                 class="bi bi-telephone"></i> (123) 456-7890</a></p>
                 </div>
             </div>
+            <h2 class="mt-5">Редагувати профіль</h2>
+            <hr>
+            <form>
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label">Ім'я</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Володимир" required
+                        autocomplete="given-name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="surnameInput" class="form-label">Прізвище <span
+                            class="text-secondary">(необов'язково)</span></label>
+                    <input type="text" class="form-control" id="surnameInput" placeholder="Великий" required
+                        autocomplete="family-name">
+                </div>
+                <div class="mb-3">
+                    <label for="phoneInput" class="form-label">Номер телефону</label>
+                    <input type="tel" class="form-control" id="phoneInput" placeholder="012 345 6789" required>
+                </div>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Електронна скринька</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="користувач@пошта.укр"
+                        required>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Пароль</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Ваш пароль..."
+                        autocomplete="new-password" required aria-describedby="passwordHelp">
+                    <div id="passwordHelp" class="form-text">Придумайте надійний пароль.</div>
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Повторіть пароль</label>
+                    <input type="password" class="form-control" id="passwordInput" placeholder="Ваш пароль..."
+                        autocomplete="new-password" required>
+                </div>
+                <button type="submit" class="btn btn-success">Зберегти</button>
+            </form>
         </main>
     </div>
     <div class="container bottom">

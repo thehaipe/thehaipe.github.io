@@ -45,7 +45,7 @@
                 </div>
                 <form id="registrationForm" action="#">
                     <div class="mb-3">
-                        <label for="emailInput" class="form-label">Поштова скринька</label>
+                        <label for="emailInput" class="form-label">Електронна скринька</label>
                         <input type="email" class="form-control" id="emailInput" placeholder="користувач@пошта.укр"
                             required>
                     </div>
@@ -60,9 +60,10 @@
                                 autocomplete="given-name" required>
                         </div>
                         <div class="mb-3">
-                            <label for="surnameInput" class="form-label">Прізвище</label>
+                            <label for="surnameInput" class="form-label">Прізвище <span
+                                    class="text-secondary">(необов'язково)</span></label>
                             <input type="text" class="form-control" id="surnameInput" placeholder="Великий" required
-                                autocomplete="family-name" required>
+                                autocomplete="family-name">
                         </div>
                     </div>
                     <div id="shelterGroup" class="d-none">
@@ -166,7 +167,6 @@
                 shelterButton.classList.remove("btn-success", "disabled-link");
                 shelterButton.classList.add("btn-secondary");
                 nameInput.required = true;
-                surnameInput.required = true;
                 shelterNameInput.required = false;
                 shelterTypeInput.required = false;
                 registerButton.textContent = "Зареєструвати як волонтера";
@@ -180,7 +180,6 @@
                 shelterButton.classList.remove("btn-secondary");
                 shelterButton.classList.add("btn-success", "disabled-link");
                 nameInput.required = false;
-                surnameInput.required = false;
                 shelterNameInput.required = true;
                 shelterTypeInput.required = true;
                 registerButton.textContent = "Зареєструвати притулок";
